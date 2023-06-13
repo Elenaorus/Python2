@@ -3,13 +3,14 @@
 #Достаточно вернуть один допустимый вариант. *Верните все возможные варианты комплектации рюкзака.
 
 dict_list = {'спички': 1, 'посуда': 4, 'запасная одежда': 5, 'палатка': 10, 'запасная обувь': 3}
-def backpack(capacity, dict_list):
-    packaging_option = []
-    for key, value in dict_list.items():
-        if value <= capacity:
-            capacity -= value
-            packaging_option.append(key)
-    return packaging_option
+capacity=15
+
+packaging_option = []
+for key, value in dict_list.items():
+    if value <= capacity:
+        capacity -= value
+        packaging_option.append(key)
+    
 
 
-print(backpack(15, dict_list))
+print(packaging_option)
